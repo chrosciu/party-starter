@@ -1,4 +1,4 @@
-package eu.chrost.party;
+package eu.chrost.party.actors;
 
 import lombok.SneakyThrows;
 

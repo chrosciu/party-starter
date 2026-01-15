@@ -1,4 +1,4 @@
-package eu.chrost.party;
+package eu.chrost.party.disasters;
 
 public class EmergencyCallException extends RuntimeException {
     public EmergencyCallException() {
