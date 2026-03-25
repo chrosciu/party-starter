@@ -2,7 +2,8 @@ import eu.chrost.party.actors.Bob;
 import eu.chrost.party.actors.Carol;
 import lombok.SneakyThrows;
 
-import static java.lang.IO.println;
+import eu.chrost.party.util.Timeline;
+import static eu.chrost.party.util.Timeline.println;
 
 @SneakyThrows
 List<String> burntKettleScenario() {
@@ -10,10 +11,14 @@ List<String> burntKettleScenario() {
         var bobTask = alice.submit(Bob::burnKettle);
         var carolTask = alice.submit(Carol::prepareSauce);
         return List.of(bobTask.get(), carolTask.get());
+    } catch (Exception e) {
+        println("Something went wrong: " + e.getMessage());
+        return List.of();
     }
 }
 
 void main() {
+    Timeline.start();
     println(burntKettleScenario());
 }
 

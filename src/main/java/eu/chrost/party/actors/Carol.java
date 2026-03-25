@@ -2,7 +2,7 @@ package eu.chrost.party.actors;
 
 import lombok.SneakyThrows;
 
-import static java.lang.IO.println;
+import static eu.chrost.party.util.Timeline.println;
 import static java.lang.Thread.sleep;
 import static java.time.Duration.ofSeconds;
 

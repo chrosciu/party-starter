@@ -3,7 +3,8 @@ import eu.chrost.party.actors.Carol;
 import eu.chrost.party.actors.Dave;
 import lombok.SneakyThrows;
 
-import static java.lang.IO.println;
+import eu.chrost.party.util.Timeline;
+import static eu.chrost.party.util.Timeline.println;
 import static java.util.concurrent.StructuredTaskScope.Subtask.State.SUCCESS;
 
 class AllSuccessfulTasksJoiner<T> implements StructuredTaskScope.Joiner<T, Stream<T>> {
@@ -34,5 +35,6 @@ List<String> allSuccessfulScenario() {
 }
 
 void main() {
+    Timeline.start();
     println(allSuccessfulScenario());
 }

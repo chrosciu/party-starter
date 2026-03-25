@@ -3,7 +3,8 @@ import eu.chrost.party.actors.Carol;
 import eu.chrost.party.disasters.EmergencyCallException;
 import lombok.SneakyThrows;
 
-import static java.lang.IO.println;
+import eu.chrost.party.util.Timeline;
+import static eu.chrost.party.util.Timeline.println;
 
 @SneakyThrows
 List<String> emergencyCallScenario() {
@@ -15,9 +16,13 @@ List<String> emergencyCallScenario() {
             throw new EmergencyCallException();
         }
         return List.of(bobTask.get(), carolTask.get());
+    } catch (Exception e) {
+        println("Something went wrong: " + e.getMessage());
+        return List.of();
     }
 }
 
 void main() {
+    Timeline.start();
     println(emergencyCallScenario());
 }
