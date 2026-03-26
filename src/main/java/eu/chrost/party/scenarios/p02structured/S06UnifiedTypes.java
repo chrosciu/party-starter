@@ -16,5 +16,6 @@ List<String> unifiedTypesScenario() {
 
 void main() {
     Timeline.start();
+    Timeline.setActor("Alice");
     println(unifiedTypesScenario());
 }

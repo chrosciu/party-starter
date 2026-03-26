@@ -3,12 +3,14 @@ package eu.chrost.party.actors;
 import lombok.SneakyThrows;
 
 import static eu.chrost.party.util.Timeline.println;
+import static eu.chrost.party.util.Timeline.setActor;
 import static java.lang.Thread.sleep;
 import static java.time.Duration.ofSeconds;
 
 public class Dave {
     @SneakyThrows
     public static String makeSalad() {
+        setActor("Dave");
         println("Wash and chop vegetables");
         sleep(ofSeconds(3));
         println("Prepare the dressing");

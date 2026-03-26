@@ -20,5 +20,6 @@ List<String> burntKettleScenario() {
 
 void main() {
     Timeline.start();
+    Timeline.setActor("Alice");
     println(burntKettleScenario());
 }

@@ -16,5 +16,6 @@ List<String> optimisticScenario()  {
 
 void main() {
     Timeline.start();
+    Timeline.setActor("Alice");
     println(optimisticScenario());
 }

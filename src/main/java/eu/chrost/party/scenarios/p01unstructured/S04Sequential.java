@@ -7,10 +7,12 @@ import static eu.chrost.party.util.Timeline.println;
 List<String> sequentialScenario() {
     var pasta = Bob.cookPasta();
     var sauce = Carol.prepareSauce();
+    Timeline.setActor("Alice");
     return List.of(pasta, sauce);
 }
 
 void main() {
     Timeline.start();
+    Timeline.setActor("Alice");
     println(sequentialScenario());
 }

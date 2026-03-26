@@ -36,5 +36,6 @@ List<String> allSuccessfulScenario() {
 
 void main() {
     Timeline.start();
+    Timeline.setActor("Alice");
     println(allSuccessfulScenario());
 }

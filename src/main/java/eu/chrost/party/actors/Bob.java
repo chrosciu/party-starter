@@ -4,12 +4,14 @@ import eu.chrost.party.disasters.BurntKettleException;
 import lombok.SneakyThrows;
 
 import static eu.chrost.party.util.Timeline.println;
+import static eu.chrost.party.util.Timeline.setActor;
 import static java.lang.Thread.sleep;
 import static java.time.Duration.ofSeconds;
 
 public class Bob {
     @SneakyThrows
     public static String cookPasta() {
+        setActor("Bob");
         try {
             println("Boil water");
             sleep(ofSeconds(5));
@@ -27,6 +29,7 @@ public class Bob {
 
     @SneakyThrows
     public static String burnKettle() {
+        setActor("Bob");
         println("Boil water");
         sleep(ofSeconds(3));
         println("Kettle is burning...");

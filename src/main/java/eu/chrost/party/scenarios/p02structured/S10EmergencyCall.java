@@ -24,5 +24,6 @@ List<String> emergencyCallScenario() {
 
 void main() {
     Timeline.start();
+    Timeline.setActor("Alice");
     println(emergencyCallScenario());
 }

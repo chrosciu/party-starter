@@ -16,5 +16,6 @@ String firstSuccessScenario() {
 
 void main() {
     Timeline.start();
+    Timeline.setActor("Alice");
     println(firstSuccessScenario());
 }
