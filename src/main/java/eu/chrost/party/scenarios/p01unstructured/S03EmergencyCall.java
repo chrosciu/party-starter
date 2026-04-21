@@ -6,7 +6,6 @@ import lombok.SneakyThrows;
 import eu.chrost.party.util.Timeline;
 import static eu.chrost.party.util.Timeline.println;
 
-@SneakyThrows
 List<String> emergencyCallScenario() {
     try (var alice = Executors.newVirtualThreadPerTaskExecutor()) {
         var bobTask = alice.submit(Bob::cookPasta);

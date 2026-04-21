@@ -5,7 +5,6 @@ import lombok.SneakyThrows;
 import eu.chrost.party.util.Timeline;
 import static eu.chrost.party.util.Timeline.println;
 
-@SneakyThrows
 List<String> burntKettleScenario() {
     try (var alice = StructuredTaskScope.<String>open()) {
         var bobTask = alice.fork(Bob::burnKettle);
